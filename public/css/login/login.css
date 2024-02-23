@@ -1,0 +1,161 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    width: 400px; /* Aumentando a largura */
+    height: 350px; /* Aumentando a altura */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Estilo comum para ambos os temas */
+  input, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+  }
+  
+  /* Estilo para a versão Light */
+  .light-theme {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .light-theme input, .light-theme button {
+    background-color: #f8f8f8;
+   
+  }
+  
+  .light-theme button {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .light-theme button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilo para a versão Dark */
+  .dark-theme {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .dark-theme input, .dark-theme button {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .dark-theme button {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  .dark-theme button:hover {
+    background-color: #333;
+  }
+  
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+   
+  }
+  
+  .theme-toggle label {
+    margin-right: 10px;
+    margin-top: 15px;
+  }
+  .signup-link {
+    margin-top: 15px;
+  }
+  
+  .signup-link p {
+    margin: 0;
+  }
+  
+  .signup-link span {
+    color: #4caf50;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .signup-link span:hover {
+    color: #45a049;
+  }
+  i {
+    cursor: pointer;
+  }
+
+  .check-animation {
+    color: #fff;
+    display: inline-block;
+    font-size: 0; /* Define o tamanho inicial para 0 */
+    opacity: 0; /* Define a opacidade inicial para 0 */
+    transform: scale(0); /* Define a escala inicial para 0 */
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+  }
+  
+  .check-animation.active {
+    font-size: 16px; /* Define o tamanho desejado */
+    opacity: 1; /* Define a opacidade para 1 */
+    transform: scale(1); /* Define a escala para 1 (tamanho original) */
+  }
+
+  .btn {
+    cursor: pointer;
+  }
+
+  .loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 1.5em;  /* Diminuí a largura */
+  height: 1.5em; /* Diminuí a altura */
+  animation-fill-mode: both;
+  animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+
+.loader {
+  color: #5c5c5c;
+  font-size: 7px;
+  position: absolute;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -2.1em;  /* Diminuí a posição esquerda */
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 2.1em;  /* Diminuí a posição direita */
+}
+
+@keyframes bblFadInOut {
+  0%, 80%, 100% { box-shadow: 0 1.5em 0 -0.8em }  /* Diminuí o tamanho da sombra */
+  40% { box-shadow: 0 1.5em 0 0 }  /* Diminuí o tamanho da sombra */
+}
+.text-center {
+  text-align: center;
+}

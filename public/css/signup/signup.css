@@ -1,0 +1,112 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .form-container {
+    width: 400px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  /* Estilo comum para ambos os temas */
+  input, select, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para a versão Light */
+  .light-theme {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .light-theme input, .light-theme select, .light-theme button {
+    background-color: #f8f8f8;
+  }
+  
+  .light-theme button {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .light-theme button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Animação para transição suave */
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-in-right {
+    animation: fadeInRight 0.5s ease-in-out;
+  }
+  
+  .fade-in-left {
+    animation: fadeInLeft 0.5s ease-in-out;
+  }
+  .notification {
+    display: none;
+    position: absolute;
+    padding: 15px;
+    background-color: #ffd900d8;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 375px;
+  }
+  .signup-link {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+
+  }
+  
+  .signup-link p {
+    margin: 0;
+  }
+  
+  .signup-link span {
+    color: #4caf50;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .signup-link span:hover {
+    color: #45a049;
+  }
+
+
+  
